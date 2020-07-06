@@ -1,7 +1,5 @@
 import Actions from "../actions/constants";
 import update from "react-addons-update";
-import {useDispatch, useSelector} from "react-redux";
-import {setCurrentItem} from "../actions/creators";
 
 const initialState=[];
 

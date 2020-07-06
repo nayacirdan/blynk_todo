@@ -4,7 +4,6 @@ import Badge from "react-bootstrap/Badge";
 import './TaskItem.scss'
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteItem, setCurrentItem} from "../../actions/creators";
 

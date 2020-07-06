@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import Main from "./components/Main/Main";
 import SideBar from "./components/Sidebar/Sidebar";
 import Row from "react-bootstrap/Row";
-import {connect, useDispatch, useSelector} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import {getToDoFromLS} from "./actions/creators"
 
 const App = ({tasks}) => {

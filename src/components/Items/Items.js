@@ -1,9 +1,7 @@
 import React from 'react';
-import CommentsList from "../CommentsList/CommentsList";
 import AddForm from "../AddForm/AddForm";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import TaskItem from "../TaskItem/TaskItem";
 import TaskList from "../TaskList/TaskList";
 import Col from "react-bootstrap/Col";
 import './Items.scss'

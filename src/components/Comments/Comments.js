@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import CommentsList from "../CommentsList/CommentsList";
 import AddForm from "../AddForm/AddForm";
 import Button from "react-bootstrap/Button";
@@ -6,8 +6,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import './Comments.scss'
 import {useDispatch, useSelector} from "react-redux";
-import {randomInteger} from "../../utils/todoUtil";
-import {addComment, addCommentToCurrent, addItem, increaseCommentsCounter} from "../../actions/creators";
+import {addCommentToCurrent} from "../../actions/creators";
 
 const Comments = () => {
 
