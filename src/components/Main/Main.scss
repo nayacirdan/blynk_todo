@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  border:1px solid red;
+  height: 100%;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.main__row {
+  justify-content: space-around;
+}

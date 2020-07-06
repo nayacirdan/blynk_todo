@@ -1,0 +1,47 @@
+.add-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+
+  &>.row {
+    width: 100%;
+    padding-left: 15px;
+    justify-content: space-between;
+  }
+  &__col{
+    padding:0;
+  }
+}
+.add-new-items-form{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.last-col{
+  display: flex;
+  justify-content: flex-end;
+}
+.add-new-comment-form{
+  display: flex;
+  align-self: flex-end;
+  align-content: stretch;
+  margin-top: 20px;
+
+  & input[type="color"] {
+    height: 100%;
+    border: none;
+    outline-color: var(--primary);
+  }
+  & .btn-add-new--comment{
+    height: 100%;
+  }
+}
+
+.comments .add-form{
+  justify-self: flex-end;
+}
+
+.form-row{
+  justify-content: space-between;
+}

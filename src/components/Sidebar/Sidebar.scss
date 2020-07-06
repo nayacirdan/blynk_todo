@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: var(--primary);
+
+  &__logo {
+    margin-top: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  &__promo {
+    color: var(--white);
+  }
+}

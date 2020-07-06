@@ -1,26 +1,51 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Main from "./components/Main/Main";
+import SideBar from "./components/Sidebar/Sidebar";
+import Row from "react-bootstrap/Row";
+import {connect, useDispatch, useSelector} from "react-redux";
+import {getToDoFromLS} from "./actions/creators"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ({tasks}) => {
+    const dispatch=useDispatch();
+
+    const getToDo=()=>{
+        const toDo=localStorage.getItem('TODO');
+        if(toDo && toDo !=='[]') {
+            dispatch(getToDoFromLS(toDo)); //
+        }
+    };
+
+    useEffect(() => {
+        getToDo();
+    }, []);
+
+
+
+    window.addEventListener("beforeunload", (ev) =>
+    {
+        ev.preventDefault();
+        localStorage.setItem('TODO', JSON.stringify(tasks));
+        return 'String for browsers without preventDefault activation'
+    });
+
+
+
+
+    return (
+        <div className="App">
+            <Row className='app-row'>
+                <SideBar/>
+                <Main/>
+            </Row>
+        </div>
+    );
+}
+const mapStoreToProps=(state)=>{
+    return {
+        tasks: state.tasks
+    }
 }
 
-export default App;
+export default connect(mapStoreToProps,null)(App);

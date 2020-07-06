@@ -1,0 +1,27 @@
+.task-item{
+display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+
+  &.active:before {
+    content: '';
+    background-color: var(--dark-secondary);
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left:0;
+  }
+}
+.task-item__text{
+
+  word-wrap: break-word;
+
+}
+.items .list-item,
+.comments .list-item{
+  margin-bottom: 10px;
+  border-top-width: 1px;
+  padding-left: 0;
+  padding-right: 0;
+}

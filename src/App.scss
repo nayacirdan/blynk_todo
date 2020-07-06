@@ -1,0 +1,17 @@
+
+$theme-colors: (
+        "primary": #4924ea,
+        "dark-primary":#27137c,
+        "secondary":#08e9f1,
+        "dark-secondary":#068488
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+.app-row {
+  height: 100vh;
+
+}
+body{
+  overflow-x: hidden;
+}
